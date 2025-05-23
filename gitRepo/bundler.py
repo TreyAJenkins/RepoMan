@@ -30,7 +30,7 @@ class Bundler:
     def add_repo(self, path: Path):
         repo = Repo(path)
         metadata = Metadata.from_repo(repo).to_dict()
-        self.datastore[path.relative_to(self.storage)] = metadata
+        self.datastore[str(path.relative_to(self.storage))] = metadata
 
     def add_all_repos(self):
         dirlist = list(Path("./storage").rglob("*/*.git"))

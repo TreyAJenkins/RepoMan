@@ -1,0 +1,7 @@
+requests
+tqdm
+urlpath
+GitPython
+rich
+colorama
+pydantic
